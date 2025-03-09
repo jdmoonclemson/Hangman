@@ -1,0 +1,75 @@
+body {
+   font-family: Arial, sans-serif;
+   text-align: center;
+}
+
+#wordToGuess {
+   margin: 20px;
+   font-size: 24px;
+   letter-spacing: 5px;
+}
+
+#letters {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   grid-gap: 5px;
+   justify-content: center;
+   max-width: 250px;
+   margin: auto;
+}
+
+#letters button {
+   padding: 10px;
+   font-size: 18px;
+   width: 40px;
+}
+
+#gallows {
+   width: 200px;
+   height: 250px;
+   margin: 20px auto;
+   border-bottom: 5px solid black;
+   position: relative;
+}
+
+.gallows-part {
+   position: absolute;
+   background: black;
+}
+
+.head {
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   top: 20px;
+   left: 80px;
+}
+
+.body {
+   width: 10px;
+   height: 60px;
+   top: 60px;
+   left: 95px;
+}
+
+.arm {
+   width: 40px;
+   height: 10px;
+   top: 80px;
+}
+
+.left-arm { left: 55px; }
+.right-arm { left: 95px; }
+
+.leg {
+   width: 40px;
+   height: 10px;
+   top: 120px;
+}
+
+.left-leg { left: 55px; }
+.right-leg { left: 95px; }
+
+.hidden {
+   visibility: hidden;
+}

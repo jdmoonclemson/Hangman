@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Hangman Game</title>
+   <link rel="stylesheet" href="hangman.css">
+   <div id="navbar"></div>
+   <script>document.addEventListener('DOMContentLoaded', () => {
+       fetch('navBar.html')
+           .then(response => response.text())
+           .then(data => {
+               document.getElementById('navbar').innerHTML = data;
+           });
+   });</script>
+</head>
+<body>
+   <h2>Group Members: Alice, Bob, Charlie</h2>
+   <div id="game">
+       <h1>Hangman Game</h1>
+       <label><input type="checkbox" id="cheatMode"> Enable Cheat Mode</label>
+       <div id="gallows">
+           <div class="gallows-part head hidden"></div>
+           <div class="gallows-part body hidden"></div>
+           <div class="gallows-part left-arm arm hidden"></div>
+           <div class="gallows-part right-arm arm hidden"></div>
+           <div class="gallows-part left-leg leg hidden"></div>
+           <div class="gallows-part right-leg leg hidden"></div>
+       </div>
+       <div id="wordToGuess"></div>
+       <div id="letters" class="grid-container"></div>
+       <button onclick="startGame()">Start New Game</button>
+       <p id="message"></p>
+   </div>
+   <script src="script.js"></script>
+</body>
+</html>
